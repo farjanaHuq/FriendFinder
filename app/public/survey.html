@@ -1,12 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>FriendFinder - Survey</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="./style.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" 
+   integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+   <script src="./javascript/survey.js"></script>
 </head>
+
 <body>
-    <h1>This is survey</h1>
+   <div class="container">
+
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+         <h1>Friend Finder</h1>
+         <h4>Answer the survey to to find a match.</h4>
+         <a class="btn btn-primary" id="home-btn" href="/"><i class="fas fa-home"></i></span> Home</a>
+      </div>
+
+      <!-- Survey form -->
+      <form id="survey-form">
+
+         <h3>Enter personal info</h3>
+
+         <!-- User info -->
+         <div class="form-group">
+            <label for="name">Name</label>
+            <input type="name" class="form-control" id="name-input" placeholder="Enter name" name="name">
+         </div>
+         <div class="form-group">
+            <label for="photo">Link to photo</label>
+            <input type="text" class="form-control" id="photo-input" placeholder="Enter photo link" name="photo">
+         </div>
+
+         <h3>On a scale of 1 to 5...</h3>
+
+         <!-- Questions -->
+         <div class="form-group">
+            <label for="answer-0">Your mind is always buzzing with unexplored ideas and plans.</label>
+            <select class="form-control" id="answer-0">
+               <option>1 (Strongly Disagree)</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+               <option>5 (Strongly Agree)</option>
+            </select>
+         </div>
+
+         <div class="form-group">
+            <label for="answer-1">How much do you like burritos?</label>
+            <select class="form-control" id="answer-1">
+               <option>1 (Strongly Disagree)</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+               <option>5 (Strongly Agree)</option>
+            </select>
+         </div>
+
+         <div class="form-group">
+            <label for="answer-2">How much do you like hamburgers?</label>
+            <select class="form-control" id="answer-2">
+               <option>1 (Strongly Disagree)</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+               <option>5 (Strongly Agree)</option>
+            </select>
+         </div>
+
+         <div class="form-group">
+            <label for="answer-3">How much do you like watching movies?</label>
+            <select class="form-control" id="answer-3">
+               <option>1 (Strongly Disagree)</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+               <option>5 (Strongly Agree)</option>
+            </select>
+         </div>
+
+         <div class="form-group">
+            <label for="answer-4">How much do you like playing video games?</label>
+            <select class="form-control" id="answer-4">
+               <option>1 (Strongly Disagree)</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+               <option>5 (Strongly Agree)</option>
+            </select>
+         </div>
+
+         <div class="form-group">
+            <label for="answer-5">How much do you like nature?</label>
+            <select class="form-control" id="answer-5">
+               <option>1 (Strongly Disagree)</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+               <option>5 (Strongly Agree)</option>
+            </select>
+         </div>
+
+         <div class="form-group">
+            <label for="answer-6">How much do you like science?</label>
+            <select class="form-control" id="answer-6">
+               <option>1 (Strongly Disagree)</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+               <option>5 (Strongly Agree)</option>
+            </select>
+         </div>
+
+         <div class="form-group">
+            <label for="answer-7">How much do you like sports?</label>
+            <select class="form-control" id="answer-7">
+               <option>1 (Strongly Disagree)</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+               <option>5 (Strongly Agree)</option>
+            </select>
+         </div>
+
+         <div class="form-group">
+            <label for="answer-8">How often do go vacationing?</label>
+            <select class="form-control" id="answer-8">
+               <option>1 (Strongly Disagree)</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+               <option>5 (Strongly Agree)</option>
+            </select>
+         </div>
+
+         <div class="form-group">
+            <label for="answer-9">How much do you use social media?</label>
+            <select class="form-control" id="answer-9">
+               <option>1 (Strongly Disagree)</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+               <option>5 (Strongly Agree)</option>
+            </select>
+         </div>
+
+         <!-- Submit button -->
+         <button type="submit" class="btn btn-primary" id="survey-submit">Submit</button>
+      </form>
+
+      <!-- Suggested friend modal -->
+      <div class="modal" id="suggested-friend-modal">
+         <div class="modal-dialog">
+            <div class="modal-content">
+
+               <!-- Modal Header -->
+               <div class="modal-header">
+                  <h4 class="modal-title">Your New friend is...</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+
+               <!-- Modal body -->
+               <div class="modal-body" id="suggested-friend-modal-body"></div>
+
+               <!-- Modal footer -->
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+               </div>
+
+            </div>
+         </div>
+      </div>
+
+   </div>
+   <div class="push"></div>
+    <br>
+    <footer  class="py-5 bg-dark" style="height: 40px">
+        <div class="container" >
+            <p class="m-0 text-center text-white">Copyright &copy; Farjana Huq 2019</p>
+        </div>
+    </footer>
+
 </body>
+
 </html>
