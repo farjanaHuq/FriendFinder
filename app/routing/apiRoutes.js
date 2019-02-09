@@ -9,8 +9,8 @@ module.exports = function(app) {
 
     
 
-    app.post("/api/friends", function(req, res) {
-       
-        console.log("On process");
+    app.post("/api/friends", function(req, res) { 
+        friendsData.push(req.body);
+        res.json(true);
     });
 }

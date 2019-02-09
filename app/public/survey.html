@@ -7,13 +7,12 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>FriendFinder - Survey</title>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-   <link rel="stylesheet" href="./style.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" 
-   integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-   <script src="./javascript/survey.js"></script>
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+   <!-- <script src="./javascript/survey.js"></script> -->
 </head>
 
 <body>
@@ -29,19 +28,23 @@
       <!-- Survey form -->
       <form id="survey-form">
 
-         <h3>Enter personal info</h3>
+         <h3>Your Info</h3>
 
          <!-- User info -->
          <div class="form-group">
             <label for="name">Name</label>
-            <input type="name" class="form-control" id="name-input" placeholder="Enter name" name="name">
+            <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
          </div>
          <div class="form-group">
             <label for="photo">Link to photo</label>
-            <input type="text" class="form-control" id="photo-input" placeholder="Enter photo link" name="photo">
+            <input type="text" class="form-control" id="photo" placeholder="Enter photo link" name="photo">
          </div>
-
-         <h3>On a scale of 1 to 5...</h3>
+         
+         <div>
+               <h3>Questions</h3>
+               <p>Answer on a scale of 1 to 5...</p>
+         </div>
+  
 
          <!-- Questions -->
          <div class="form-group">
@@ -51,111 +54,112 @@
                <option>2</option>
                <option>3</option>
                <option>4</option>
-               <option>5 (Strongly Agree)</option>
+               <option>5 </option>
             </select>
          </div>
 
          <div class="form-group">
-            <label for="answer-1">How much do you like burritos?</label>
+            <label for="answer-1">Generally speaking, you rely more on your experience than your imagination.</label>
             <select class="form-control" id="answer-1">
-               <option>1 (Strongly Disagree)</option>
+               <option>1 </option>
                <option>2</option>
                <option>3</option>
                <option>4</option>
-               <option>5 (Strongly Agree)</option>
+               <option>5 </option>
             </select>
          </div>
 
          <div class="form-group">
-            <label for="answer-2">How much do you like hamburgers?</label>
+            <label for="answer-2">You find it easy to stay relaxed and focused even when there is some pressure.</label>
             <select class="form-control" id="answer-2">
-               <option>1 (Strongly Disagree)</option>
+               <option>1 </option>
                <option>2</option>
                <option>3</option>
                <option>4</option>
-               <option>5 (Strongly Agree)</option>
+               <option>5 </option>
             </select>
          </div>
 
          <div class="form-group">
-            <label for="answer-3">How much do you like watching movies?</label>
+            <label for="answer-3">You rarely do something just out of sheer curiosity.</label>
             <select class="form-control" id="answer-3">
-               <option>1 (Strongly Disagree)</option>
+               <option>1 </option>
                <option>2</option>
                <option>3</option>
                <option>4</option>
-               <option>5 (Strongly Agree)</option>
+               <option>5 </option>
             </select>
          </div>
 
          <div class="form-group">
-            <label for="answer-4">How much do you like playing video games?</label>
+            <label for="answer-4">People can rarely upset you.</label>
             <select class="form-control" id="answer-4">
-               <option>1 (Strongly Disagree)</option>
+               <option>1 </option>
                <option>2</option>
                <option>3</option>
                <option>4</option>
-               <option>5 (Strongly Agree)</option>
+               <option>5 </option>
             </select>
          </div>
 
          <div class="form-group">
-            <label for="answer-5">How much do you like nature?</label>
+            <label for="answer-5">It is often difficult for you to relate to other people’s feelings.</label>
             <select class="form-control" id="answer-5">
-               <option>1 (Strongly Disagree)</option>
+               <option>1 </option>
                <option>2</option>
                <option>3</option>
                <option>4</option>
-               <option>5 (Strongly Agree)</option>
+               <option>5</option>
             </select>
          </div>
 
          <div class="form-group">
-            <label for="answer-6">How much do you like science?</label>
+            <label for="answer-6">In a discussion, truth should be more important than people’s sensitivities.</label>
             <select class="form-control" id="answer-6">
-               <option>1 (Strongly Disagree)</option>
+               <option>1 </option>
                <option>2</option>
                <option>3</option>
                <option>4</option>
-               <option>5 (Strongly Agree)</option>
+               <option>5</option>
             </select>
          </div>
 
          <div class="form-group">
-            <label for="answer-7">How much do you like sports?</label>
+            <label for="answer-7">You rarely get carried away by fantasies and ideas.</label>
             <select class="form-control" id="answer-7">
-               <option>1 (Strongly Disagree)</option>
+               <option>1 </option>
                <option>2</option>
                <option>3</option>
                <option>4</option>
-               <option>5 (Strongly Agree)</option>
+               <option>5 </option>
             </select>
          </div>
 
          <div class="form-group">
-            <label for="answer-8">How often do go vacationing?</label>
+            <label for="answer-8">You think that everyone’s views should be respected regardless of whether they are
+               supported by facts or not.</label>
             <select class="form-control" id="answer-8">
-               <option>1 (Strongly Disagree)</option>
+               <option>1 </option>
                <option>2</option>
                <option>3</option>
                <option>4</option>
-               <option>5 (Strongly Agree)</option>
+               <option>5 </option>
             </select>
          </div>
 
          <div class="form-group">
-            <label for="answer-9">How much do you use social media?</label>
+            <label for="answer-9">You feel more energetic after spending time with a group of people.</label>
             <select class="form-control" id="answer-9">
-               <option>1 (Strongly Disagree)</option>
+               <option>1 </option>
                <option>2</option>
                <option>3</option>
                <option>4</option>
-               <option>5 (Strongly Agree)</option>
+               <option>5 </option>
             </select>
          </div>
 
          <!-- Submit button -->
-         <button type="submit" class="btn btn-primary" id="survey-submit">Submit</button>
+         <button type="submit" class="btn btn-primary" id="submit-survey">Submit</button>
       </form>
 
       <!-- Suggested friend modal -->
@@ -180,16 +184,116 @@
             </div>
          </div>
       </div>
-
+      <div>
+            <p><a href="#" id="clear">Clear Friends</a> | <a href="/api/friends">API Friends Link</a> | <a href="#">Github
+                  Repo</a>
+      </div>
    </div>
+  
    <div class="push"></div>
-    <br>
-    <footer  class="py-5 bg-dark" style="height: 40px">
-        <div class="container" >
-            <p class="m-0 text-center text-white">Copyright &copy; Farjana Huq 2019</p>
-        </div>
-    </footer>
+   <br>
+   <footer class="py-5 bg-dark" style="height: 30px">
+      <div class="container">
+         <p class="m-0 text-center text-white">Copyright &copy; Farjana Huq 2019</p>
+      </div>
+   </footer>
 
 </body>
+<script type="text/javascript">
+  console.log("survey");
+   
+  var possibleFriends = [];
+  var userScoreArr = [];
+  var scoreDiff = [];
+  
+  //getting JSON data using AJAX library
+  $.ajax({ url: "/api/friends", method: "GET" })
+         .then(function(data) {
+         console.log(data);
+         
+         possibleFriends = data;
+         
+         //looping through friends data
+         data.forEach(elem => {
+   
+             possibleFriends.push(elem);
+     
+        });  
+  
+  //event listener for submit button
+  $("#submit-survey").on("click", function(event) {
+      event.preventDefault();
 
+      // The newFriend object stores the form elements
+      var newFriend = {
+         name: $("#name").val().trim(),
+         photo: $("#photo").val().trim(),
+         scores: []
+         }
+         for (var i = 0; i < 10; i++) {
+               newFriend.scores.push($(`#answer-${i}`).val().trim())
+         }
+         console.log("-----------------------------------");
+         console.log(newFriend);
+      
+      //Storing user answers to the userScoreArr
+      for(var i = 0; i<10; i++){
+            var answer = (Number($(`#answer-${i}`).val()));
+            userScoreArr.push(answer);
+         }
+      
+      //posts data that has been submitted to the survey on the api/friends route
+       $.post("/api/friends", newFriend,
+            function(data) {
+
+            // If a friends data is available, then updates the friend data log.
+            if (data) {
+               alert("Data has been updated!");
+            }
+            else {
+               alert("Unable to post data :-(");
+            }
+            // Clear the form when submitting
+            $("#name-input").val("");
+            $("#photo-input").val("");
+            for (var i = 0; i < 10; i++) {
+                  $(`#answer-${i}`).val("1");
+               }
+        });
+ 
+         console.log("-----------------------------------");
+         console.log("User Score Array: " +userScoreArr);
+      });
+      
+      console.log("-----------------------------------");
+      console.log("Friends database: " +possibleFriends); 
+      //looping through friends data
+      possibleFriends.forEach(elem => {
+         // push a new object to scoreDiffs array with a name key and totalDiff key
+               scoreDiff.push({
+                  name: elem.name,
+                  totalDiff: 0
+              });
+         //Calculating the difference between userAnswer and the answer from friendsArray
+            for(var i=0; i<elem.scores.length; i++){
+                     var difference = Math.abs(elem.scores[i] - userScoreArr[i]);
+                     scoreDiff[scoreDiff.length-1].totalDiff += difference;
+               }     
+        }); 
+
+        console.log("-----------------------------------");  
+        console.log("ScoreDiff Array" +scoreDiff);
+      
+      // sort the score deltas array based on the scoreDelta property value
+         function compare(a, b) {
+            if (a.totalDelta < b.totalDelta)
+                return -1;
+            if (a.totalDelta > b.totalDelta)
+                return 1;
+            return 0;
+        }
+           
+  });
+</script>
+// <!-- <script src="./javascript/survey.js"></script> -->
 </html>
