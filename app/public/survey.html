@@ -13,6 +13,7 @@
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
    <!-- <script src="./javascript/survey.js"></script> -->
+   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -199,101 +200,6 @@
    </footer>
 
 </body>
-<script type="text/javascript">
-  console.log("survey");
-   
-  var possibleFriends = [];
-  var userScoreArr = [];
-  var scoreDiff = [];
-  
-  //getting JSON data using AJAX library
-  $.ajax({ url: "/api/friends", method: "GET" })
-         .then(function(data) {
-         console.log(data);
-         
-         possibleFriends = data;
-         
-         //looping through friends data
-         data.forEach(elem => {
-   
-             possibleFriends.push(elem);
-     
-        });  
-  
-  //event listener for submit button
-  $("#submit-survey").on("click", function(event) {
-      event.preventDefault();
 
-      // The newFriend object stores the form elements
-      var newFriend = {
-         name: $("#name").val().trim(),
-         photo: $("#photo").val().trim(),
-         scores: []
-         }
-         for (var i = 0; i < 10; i++) {
-               newFriend.scores.push($(`#answer-${i}`).val().trim())
-         }
-         console.log("-----------------------------------");
-         console.log(newFriend);
-      
-      //Storing user answers to the userScoreArr
-      for(var i = 0; i<10; i++){
-            var answer = (Number($(`#answer-${i}`).val()));
-            userScoreArr.push(answer);
-         }
-      
-      //posts data that has been submitted to the survey on the api/friends route
-       $.post("/api/friends", newFriend,
-            function(data) {
-
-            // If a friends data is available, then updates the friend data log.
-            if (data) {
-               alert("Data has been updated!");
-            }
-            else {
-               alert("Unable to post data :-(");
-            }
-            // Clear the form when submitting
-            $("#name-input").val("");
-            $("#photo-input").val("");
-            for (var i = 0; i < 10; i++) {
-                  $(`#answer-${i}`).val("1");
-               }
-        });
- 
-         console.log("-----------------------------------");
-         console.log("User Score Array: " +userScoreArr);
-      });
-      
-      console.log("-----------------------------------");
-      console.log("Friends database: " +possibleFriends); 
-      //looping through friends data
-      possibleFriends.forEach(elem => {
-         // push a new object to scoreDiffs array with a name key and totalDiff key
-               scoreDiff.push({
-                  name: elem.name,
-                  totalDiff: 0
-              });
-         //Calculating the difference between userAnswer and the answer from friendsArray
-            for(var i=0; i<elem.scores.length; i++){
-                     var difference = Math.abs(elem.scores[i] - userScoreArr[i]);
-                     scoreDiff[scoreDiff.length-1].totalDiff += difference;
-               }     
-        }); 
-
-        console.log("-----------------------------------");  
-        console.log("ScoreDiff Array" +scoreDiff);
-      
-      // sort the score deltas array based on the scoreDelta property value
-         function compare(a, b) {
-            if (a.totalDelta < b.totalDelta)
-                return -1;
-            if (a.totalDelta > b.totalDelta)
-                return 1;
-            return 0;
-        }
-           
-  });
-</script>
-// <!-- <script src="./javascript/survey.js"></script> -->
+ <script src="/javascript/survey.js"></script>
 </html>
