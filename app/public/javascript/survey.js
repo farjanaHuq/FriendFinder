@@ -57,7 +57,8 @@ $( document ).ready(function() {
       // show the modal and set its html content to the chosen friend's name/picture
        $('#suggested-friend-modal-body').html(`
            <p>${possibleFriends[i].name}!</p>
-           <img class="img-responsive" style= "height:250px, width:200px" src="${possibleFriends[i].photo}"  alt="${possibleFriends[i].name}">
+           <div class="img-container">
+           <img class="img-responsive" src="${possibleFriends[i].photo}"  alt="${possibleFriends[i].name}"></div>
        `);
        $('#suggested-friend-modal').modal('show');
       
