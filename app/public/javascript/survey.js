@@ -17,10 +17,12 @@ $( document ).ready(function() {
         });     
   }); 
 
+  // =========================================================================================================
   //event listener for submit button
   $("#submit-survey").on("click", function(event) {
       event.preventDefault();
-
+      
+      // ===================================New Friend (from user input)======================================
       // The newFriend object stores the form elements
       var newFriend = {
          name: $("#name").val().trim(),
@@ -38,7 +40,7 @@ $( document ).ready(function() {
             var answer = (Number($(`#answer-${i}`).val()));
             userScoreArr.push(answer);
          }
-         
+      //====================================Finding Friend=====================================================
       //callback getScore function
       getScore(userScoreArr);
       
@@ -50,14 +52,16 @@ $( document ).ready(function() {
 
       // find the index in the potentialFriends array with that user's name
        var i = possibleFriends.findIndex(elem => elem.name === selectedFriend);
-
+      
+      //====================================Modal Output============================================
       // show the modal and set its html content to the chosen friend's name/picture
        $('#suggested-friend-modal-body').html(`
            <p>${possibleFriends[i].name}!</p>
-           <img id= "img-id" src="${possibleFriends[i].photo}" alt="${possibleFriends[i].name}">
+           <img class="img-responsive" style= "height:250px, width:200px" src="${possibleFriends[i].photo}"  alt="${possibleFriends[i].name}">
        `);
        $('#suggested-friend-modal').modal('show');
-
+      
+      //================================Post data as JSON object================================================
       //posts data that has been submitted to the survey on the api/friends route
        $.post("/api/friends", newFriend,
             function(data) {
@@ -81,7 +85,7 @@ $( document ).ready(function() {
 
 
  
-
+   // ===========================================CallBack Functions=================================================
     //callback function to calculate the difference in scores between new user and friend from friendlist array.
     function getScore(userScoreArr){
        
@@ -117,13 +121,4 @@ $( document ).ready(function() {
             return 0;
       }
       
-       
-
-       // show the modal and set its html content to the chosen friend's name/picture
-      //  $('#suggested-friend-modal-body').html(`
-      //      <p>${potentialFriends[i].name}!</p>
-      //      <img src="${potentialFriends[i].photo}" alt="${potentialFriends[i].name}">
-      //  `);
-      //  $('#suggested-friend-modal').modal('show');
-         
   });
