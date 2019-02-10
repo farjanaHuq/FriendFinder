@@ -84,8 +84,6 @@ $( document ).ready(function() {
        
      });
 
-
- 
    // ===========================================CallBack Functions=================================================
     //callback function to calculate the difference in scores between new user and friend from friendlist array.
     function getScore(userScoreArr){
