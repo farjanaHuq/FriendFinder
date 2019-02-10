@@ -1,7 +1,7 @@
 var friendsList = [
     {
         "name":"Denzel Washington",
-        "photo":"https://en.wikipedia.org/wiki/Denzel_Washington#/media/File:Denzel_Washington_cropped.jpg",
+        "photo":"https://www.pinterest.co.kr/pin/790311434579042007/visual-search/?x=16&y=16&w=530&h=671",
         "scores":[
             5,
             1,
@@ -17,7 +17,7 @@ var friendsList = [
       },
       {
         "name":"Matt Damon",
-        "photo":"https://en.wikipedia.org/wiki/Matt_Damon#/media/File:Matt_Damon_TIFF_2015.jpg",
+        "photo":"https://i.pinimg.com/736x/93/3c/26/933c26217c6b370bd32a95ae63a2b122.jpg",
         "scores":[
             5,
             3,
@@ -33,7 +33,7 @@ var friendsList = [
       },
       {
         "name":"Scarlett Johansson",
-        "photo":"https://en.wikipedia.org/wiki/Scarlett_Johansson#/media/File:Scarlett_Johansson_in_Kuwait_01b-tweaked.jpg",
+        "photo":"https://www.pinterest.co.kr/pin/839288080532481845/visual-search/?x=16&y=21&w=530&h=662",
         "scores":[
             5,
             1,
@@ -49,7 +49,7 @@ var friendsList = [
       },
       {
         "name":"Julia Roberts",
-        "photo":"https://en.wikipedia.org/wiki/Julia_Roberts#/media/File:Julia_Roberts_Cannes_2016_3.jpg",
+        "photo":"https://www.pinterest.co.kr/pin/930275485341http://www.morefashionable.com/wp-content/uploads/2011/09/Julia-Robert-Shiny-Hair-of-Layered-Style.jpg74823/",
         "scores":[
             5,
             2,
