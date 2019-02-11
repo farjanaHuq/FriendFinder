@@ -1,4 +1,4 @@
-# FriendFinder - Node and Express Servers
+# FriendFinder - Node and Express Servers (A Full Stack Project)
 
 - "FriendFinder" application is similar to a dating app. 
 - This full-stack site will take in results from your users' surveys, then compare their answers with those from other users. 
